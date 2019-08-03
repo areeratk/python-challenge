@@ -59,3 +59,17 @@ with open(profits_losses_csv, newline="") as csvfile:
     print(f"Greatest Decrease in Profits: {greatest_decrease_profits_month}  $({greatest_decrease_profits})")
     print("------------------------------------------------------")
 
+    #Final Script
+    f= open("PyBank_output.txt","w+")
+    
+    f.write("-------------------\n")
+    f.write(f"Financial Analysis\n")
+    f.write("------------------------------------------------------\n")
+    f.write(f"Total Months: {str(total_months)}\n")
+    f.write(f"Total Profits: ${str(total_profits)}\n")   
+    f.write(f"Average Change: ${str(average_change_profits)}\n")
+    f.write(f"Greatest Increase in Profits: {greatest_increase_profits_month}  $({greatest_increase_profits})\n")
+    f.write(f"Greatest Decrease in Profits: {greatest_decrease_profits_month}  $({greatest_decrease_profits})\n")
+    f.write("------------------------------------------------------\n")
+
+    f.close()
